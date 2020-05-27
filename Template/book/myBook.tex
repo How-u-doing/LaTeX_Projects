@@ -1,0 +1,142 @@
+\documentclass{book}
+\usepackage[margin=1in]{geometry}
+\usepackage{lipsum}
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage{pdfpages}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{fancyhdr}
+
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=orange,
+	urlcolor=magenta
+}
+
+\linespread{1.3}
+\pagestyle{fancy}
+\fancyhf{} 	% it clears the header and footer of default "plain" page style
+\fancyhead[LE,RO]{\leftmark}
+\fancyhead[LO,RE]{\thepage}
+
+
+\begin{document}
+	% cover page
+	\thispagestyle{empty}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.0\linewidth]{img/lion}
+		\caption*{how U doin'?}
+		\label{fig:lion}
+	\end{figure}
+	\pagecolor{pink}\afterpage{\nopagecolor}
+	\clearpage
+	\newpage
+	
+	\begin{center}
+		\vspace*{\stretch{1}}		
+		{\LARGE \emph{This page intentionally left blank} }
+		\vspace*{\stretch{1}}
+	\end{center}
+	
+   
+	
+	\thispagestyle{empty}	
+	\title{My First Book}
+	\author{10170437 Mark Taylor}
+	\date{}
+	\maketitle
+	
+	% declaration
+	Many of the designations used by manufacturers and sellers to distinguish 
+	their products are claimed as trade-marks.  Where those designations 
+	appear in this book, and the publisher was aware of a trademark claim, 
+	thedesignations have been printed with initial capital letters or in all 
+	capitals.The authors and publisher have taken care in the preparation of 
+	this book, but make no expressed or impliedwarranty of any kind and assume 
+	no responsibility for errors or omissions. No liability is assumed for 
+	incidentalor consequential damages in connection with or arising out of 
+	the use of the information or programs containedherein.For information 
+	about buying this title in bulk quantities, or for special sales 
+	opportunities (which may includeelectronic versions;  custom cover 
+	designs;  and content particular to your business, training goals, 
+	marketingfocus, or branding interests), please contact our corporate sales 
+	department atcorpsales \url{@pearsoned.com} or(800) 382-3419.For 
+	government sales inquiries, please contact 
+	\url{governmentsales@pearsoned.com}.For questions about sales outside the 
+	U.S., please contact \url{intlcs@pearson.com}.Visit us on the 
+	Web:informit.com/awLibrary of Congress Catalog Number: 
+	2017946531Copyrightc©2018 Pearson Education, Inc.This book was typeset by 
+	Nicolai M. Josuttis using the LATEX document processing system.All rights 
+	reserved.  Printed in the United States of America.  This publication is 
+	protected by copyright, andpermission  must  be  obtained  from  the  
+	publisher  prior  to  any  prohibited  reproduction,  storage  in  a  
+	retrievalsystem,  or  transmission  in  any  form  or  by  any  means,  
+	electronic,  mechanical,  photocopying,  recording,  orlikewise. For 
+	information regarding permissions, request forms and the appropriate 
+	contacts within the PearsonEducation Global Rights \& Permissions 
+	Department, please visit \url{www.pearsoned.com/permissions/}.
+	
+	\clearpage
+	\newpage	
+	\tableofcontents	
+	\clearpage
+	\newpage
+	
+	% preface & acknowledge
+	\section*{Acknowledgments}
+	Writing a book is hard.  Maintaining a book is even harder.  It took us 
+	more than five years—spreadover the past decade—to come up with this 
+	second edition, and it couldn’t have been done withoutthe support and 
+	patience of a lot of people.First, we’d like to thank everyone in the C++ 
+	community and on the C++ standardization com-mittee.  In addition to all 
+	the work to add new language and library features, they spent many, 
+	manyhours explaining and discussing their work with us, and they did so 
+	with patience and enthusiasm.Part of this community also includes the 
+	programmers who gave feedback for errors and possibleimprovement for the 
+	first edition over the past 15 years.  There are simply too many to list 
+	them all,but you know who you are and we’re truly grateful to you for 
+	taking the time to write up your thoughtsand observations.
+	 
+
+	
+	\chapter{Blabla}
+	\lipsum
+	\lipsum
+	
+	
+	\chapter{Insert PDFs \& links}	
+	Here is a link to \hyperref[fig:lion]{cover page}.
+	And here is another link that links to
+	\href{https://github.com/How-u-doing}{GitHub}.
+			
+	\noindent See, there's a footnote.\footnote{Hola, this is my GitHub
+	\url{https://github.com/How-u-doing}} No, It should be 
+	\hyperref[blabla_again]{this} one.
+	
+	\lipsum
+	
+	\clearpage 
+	\newpage
+	\includegraphics[scale=0.5]{svg/test}
+	\label{test}
+	
+	\includegraphics[scale=0.5]{svg/image}
+	\label{image}
+	\clearpage
+	\newpage
+	
+	\chapter{Blabla Again}\label{blabla_again}
+	\lipsum
+	\lipsum
+	
+	\chapter{Input multi-page pdf}
+	Possibly will lose hyperlinks
+	\includepdf[pages=-]{hw2.pdf}
+	
+	
+\end{document}
+
