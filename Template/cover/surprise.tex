@@ -1,0 +1,36 @@
+\documentclass[a4paper,english]{article}
+\usepackage[margin=1in]{geometry} % control the image size here
+\usepackage{afterpage}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{caption}
+
+%% for emoji %%
+\usepackage{expl3}
+\expandafter\def\csname ver@l3regex.sty\endcsname{}
+\usepackage{coloremoji}
+
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=orange,
+	urlcolor=magenta
+}
+
+\begin{document}
+	% cover page
+	\thispagestyle{empty}
+	\begin{figure}
+		\centering
+		\includegraphics[width=1.0\linewidth]{img/lion.png}
+		\caption*{How U doin', \href{http://how-u-doing.github.io/}{Miss 
+		White}?
+			\\ $🐊^{🐊^{🐊}} = ∫_{🎃}^{🎅} 🙊 \ d🍀$ }
+		\label{cover:lion}
+	\end{figure}
+	\pagecolor{pink}
+	\afterpage{\nopagecolor}
+	\clearpage
+	\newpage
+	
+\end{document}
